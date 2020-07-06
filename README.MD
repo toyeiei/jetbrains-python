@@ -1,8 +1,6 @@
 # **Learn Python on Jetbrains Academy**
 
-Learn Python and popular programming languages free for two months at https://www.jetbrains.com/academy/ (Updated on 6 July 2020)
-
-List of Python Projects I've completed:
+Learn Python and popular programming languages free for two months at https://www.jetbrains.com/academy/ (Updated on 6 July 2020). Below are the list of Python projects I've completed.
 
 ### Easy Level
 - Simple chatty bot
