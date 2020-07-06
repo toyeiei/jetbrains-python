@@ -10,13 +10,18 @@ class CoffeeMachine:
     money = 550
     current_state = None  # keep track of last action
     coffee_type = None  # keep track of last order 
+    status = True 
 
     def turn_on_machine(self):
-        while True:
+        while self.status:
             # update current state i.e. get input from user
             self.get_action()
+
             # five states of our coffee machine
-            if self.current_state == "buy":
+            if self.current_state == "exit":
+                self.status = False  # exit from the program
+                break
+            elif self.current_state == "buy":
                 self.make_order()
             elif self.current_state == "fill":
                 self.fill_resource()
@@ -24,15 +29,15 @@ class CoffeeMachine:
                 self.take_money()
             elif self.current_state == "remaining":
                 self.display_remaining()                   
-            elif self.current_state == "exit":
-                break
 
     def get_action(self):
+        # exit will break from loop
         self.current_state = input("Write action (buy, fill, take, remaining, exit): ")
 
     def make_order(self):
         self.coffee_type = input("What do you want to buy? 1 - espresso, 2 - latte, 3 - cappuccino, " +
-                                         "back - to main menu: ")
+                                         "back - to main menu: ")        
+    
         if self.coffee_type == "1" and self.water >= 250:
             self.making_coffee()
             self.water -= 250
@@ -54,7 +59,7 @@ class CoffeeMachine:
             self.money += 6   
             self.disp_cup -= 1 
         elif self.coffee_type == "back":
-            self.get_action()
+            self.turn_on_machine()
         else:
             self.not_enough_water()
 
