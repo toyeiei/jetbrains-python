@@ -1,5 +1,7 @@
 # **Learn Python on Jetbrains Academy**
 
+![JetBrains Python Skill Map](https://github.com/toyeiei/jetbrains-python/blob/master/jetbrains_progress.JPG)
+
 Learn Python and popular programming languages free for two months at https://www.jetbrains.com/academy/ (Updated on 6 July 2020). Below are the list of Python projects I've completed.
 
 ### Easy Level
